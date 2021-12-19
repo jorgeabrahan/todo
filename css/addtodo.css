@@ -1,0 +1,59 @@
+.main {
+    color: white;
+    --main-padding: 1rem;
+    padding-block-start: var(--main-padding);
+    padding-block-end: var(--main-padding);
+}
+
+.addtodo {
+    --todo-gap: .5em;
+
+    display: flex;
+    align-items: center;
+    gap: var(--todo-gap);
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.addtodo__input {
+    padding: var(--input-block) var(--input-inline);
+    width: 100%;
+}
+
+.addtodo__group {
+    flex: 1;
+
+}
+
+@media (max-width: 500px) {
+    .addtodo {
+        flex-direction: column;
+    }
+    .addtodo__group {
+        width: 100%;
+    }
+    .addtodo__button {
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .addtodo {
+        align-items: flex-end;
+    }
+}
+
+@media (min-width: 768px) {
+    .addtodo__group {
+        display: flex;
+        align-items: center;
+        gap: var(--todo-gap);
+    }
+}
+.addtodo__group--description {
+    flex: 2;
+}
+
+.addtodo__button {
+    display: block;
+}

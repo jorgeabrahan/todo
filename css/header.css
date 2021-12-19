@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+:root {
+    --input-inline: .2em;
+    --input-block: .5em;
+}
+
+body {
+    margin: 0;
+    background: rgb(60, 60, 60);
+}
+
+.header {
+    background: rgb(44, 44, 44);
+    color: white;
+}
+
+.container {
+    display: block;
+    max-width: 1024px;
+
+    --padding-inline: .5em;
+    --margin-inline: auto;
+
+    padding-inline-start: var(--padding-inline);
+    padding-inline-end: var(--padding-inline);
+    margin-inline-start: var(--margin-inline);
+    margin-inline-end: var(--margin-inline);
+}
+
+.header__nav, .header__forms {
+    display: flex;
+    align-items: center;
+}
+
+.header__nav {
+    justify-content: space-between;
+}
+
+.header__forms {
+    gap: 2em;
+}
+
+@media (max-width: 768px) {
+    .header__forms {
+        gap: 0.5em;
+        flex-direction: column;
+    }
+}
+
+.header__button, .addtodo__button {
+    --input-inline: 1em;
+    background: none;
+    outline: none;
+    color: inherit;
+    border: 2px solid white;
+    border-radius: .2em;
+    cursor: pointer;
+}
+
+.header__input, .header__button, .addtodo__button {
+    padding: var(--input-block) var(--input-inline);
+}

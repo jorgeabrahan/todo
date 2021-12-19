@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do</title>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/addtodo.css">
+    <link rel="stylesheet" href="/css/todo.css">
+    <link rel="stylesheet" href="/css/modal.css">
+
+    <link rel="icon" href="/img/todo_icon.png">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+    <header class="header">
+        <container class="container">
+            <nav class="header__nav">
+                <h1 class="header__title">ToDo</h1>
+                <div class="header__forms">
+                    <form id="frmFilter" class="header__form">
+                        <label for="inptAll" class="header__label">
+                            <input type="radio" name="filter" id="inptAll" checked="checked">
+                            All
+                        </label>
+                        <label for="inptDone" class="header__label">
+                            <input type="radio" name="filter" id="inptDone">
+                            Done
+                        </label>
+                        <label for="inptMissing" class="header__label">
+                            <input type="radio" name="filter" id="inptMissing">
+                            Missing
+                        </label>
+                    </form>
+                    <form autocomplete="off" id="frmSearch" class="header__form">
+                        <input type="search" name="inptSearch" id="inptSearch" spellcheck="false" class="header__input" placeholder="...search something" required>
+                        <input type="submit" value="Search" class="header__button active">
+                    </form>
+                </div>
+            </nav>
+        </container>
+    </header>
+    <main class="main">
+        <container class="container">
+            <form id="frmAddToDo" autocomplete="off" class="addtodo">
+                <div class="addtodo__group">
+                    <label for="inptToDoTitle" class="addtodo__label">
+                        Title:
+                    </label>
+                    <input type="text" name="inptToDoTitle" id="inptToDoTitle" class="addtodo__input" maxlength="15" spellcheck="false" autofocus required>
+                </div>
+                <div class="addtodo__group addtodo__group--description">
+                    <label for="inptToDoDescription" class="addtodo__label">
+                        Description:
+                    </label>
+                    <input type="text" name="inptToDoDescription" id="inptToDoDescription" class="addtodo__input" maxlength="70" spellcheck="false" required>
+                </div>               
+                <input type="submit" value="Add" class="addtodo__button active"> 
+            </form>
+
+            <div class="todos" id="cntToDos">
+            </div>
+
+            <div class="modal d-none">
+                <form class="modal__form" autocomplete="off" id="frmUpdateToDo">
+                    <i class="fa fa-times modal__icon"></i>
+                    <div class="modal__group">
+                        <label for="inptNewTitle" class="modal__label">
+                            Title:
+                        </label>
+                        <input type="text" class="modal__input" spellcheck="false" maxlength="15" id="inptNewTitle" name="inptNewTitle" required>
+                    </div>
+                    <div class="modal__group">
+                        <label for="inptNewDescription" class="modal__label">
+                            Description:
+                        </label>
+                        <input type="text" class="modal__input" spellcheck="false" maxlength="70" id="inptNewDescription" name="inptNewDescription" required>
+                    </div>
+                    <input type="submit" value="Update" class="modal__button active"></input>
+                </form>
+            </div>
+        </container>
+    </main>
+</body>
+<script src="js/formadd.js" type="module"></script>
+</html>
