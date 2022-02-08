@@ -1,9 +1,4 @@
-Pagina web responsive de un to-do que permite filtrar por: todos, hechos y no hechos; tambien incorpora un buscador para mostrar solo aquellos elementos que tengan un titulo o una descripcion identica a la busqueda realizada.
+Sitio web para administrar las cosas por hacer. Esta elaborado con vanilla JS y hace uso de la API del LocalStorage para almacenar la información agregada por el usuario.
+Permite realizar todas las funciones basicas de una base de datos: crear, leer, actualizar y eliminar. Ademas incluye un filtrador que permite mostrar solo las tareas que ya estan hechas, las que faltan y todas. También incorpora un buscador que recorre todas las tareas e identifica aquellas cuya descripcion o titulo tienen una coincidencia exacta con la busqueda realizada por el usuario.
+Cada tarea puede ser marcada completada e incompleta o tambien eliminarla o editarla.
 
-Todas las cosas por hacer se agregan al localStorage, esto me permitido conocer mejor esta forma de almacenamiento de forma local.
-
-La estructura de cada todo permite: marcarlo o desmarcarlo como completado, editar el titulo y la descripcion y tambien eliminarlo.
-
-Tambien puse en practica la importacion y exportacion de clases y la estructura de codigo limpio en modo estricto.
-
-Objetivo -> utilizar localStorage y escribir codigo limpio y legible en vanilla JavaScript con el modo estricto.
