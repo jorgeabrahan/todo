@@ -1,4 +1,3 @@
-Sitio web para administrar las cosas por hacer. Esta elaborado con vanilla JS y hace uso de la API del LocalStorage para almacenar la información agregada por el usuario.
-Permite realizar todas las funciones basicas de una base de datos: crear, leer, actualizar y eliminar. Ademas incluye un filtrador que permite mostrar solo las tareas que ya estan hechas, las que faltan y todas. También incorpora un buscador que recorre todas las tareas e identifica aquellas cuya descripcion o titulo tienen una coincidencia exacta con la busqueda realizada por el usuario.
-Cada tarea puede ser marcada completada e incompleta o tambien eliminarla o editarla.
-
+Website to manage your things to-do. It was developed using vanilla JS and LocalStorage API to store all the information added by the user. 
+Contains all the CRUD basic operations to create, read, update or delete data from the LocalStorage. Also includes a filter for the tasks (all, complete, incomplete). I programmed a search input to look up for a specific task and identify those with the same title or description than the one the user is looking for.
+Every task can be marked as complete or incomplete and also be deleted or edited.
